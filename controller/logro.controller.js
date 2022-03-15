@@ -1,4 +1,4 @@
-const mysql = require('mysql');
+//const mysql = require('mysql');
 const conexion = require('../helpers/mysql-config');
 
 
@@ -7,7 +7,6 @@ module.exports.getLogros = (req,res) =>{
         conexion.query(sql,(error,results,fields) =>{
             if(error)
                 res.send(error);
-
             res.json(results);
         })
 }
